@@ -7,6 +7,12 @@ import Title from './components/Title.jsx';
 import Todo from './components/Todo.jsx';
 import React, {useState, useEffect} from 'react';
 
+import './App.css';
+import Modal from './components/Modal.jsx';
+import Title from './components/Title.jsx';
+import Todo from './components/Todo.jsx';
+import React, {useState, useEffect} from 'react';
+
 
 function App() {
 
@@ -31,6 +37,7 @@ function App() {
   // Don't forget to pass in a 2nd argument, usually, an empty array [],
   // or useEffect will run every time this page is rendered.
 
+  
   return (
     <div>
       <Title />

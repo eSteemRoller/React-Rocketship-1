@@ -1,3 +1,14 @@
+
+.todo {
+    width: calc(100% / 3);
+    border: 1px solid black;
+    padding: 16px;
+}
+
+.add-todo {
+    padding-right: 64px;
+    margin-right: 32px;
+}
 .todo {
     width: calc(100% / 3);
     border: 1px solid black;
