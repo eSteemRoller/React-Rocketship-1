@@ -30,5 +30,26 @@ function App() {
     </div>
   );
 }
+function App() {
+
+
+  
+  return (
+    <div>
+      <Router>
+        <nav>
+          <Link to="/">Home</a>
+          <Link to="/about">About</a>
+          <Link to="/contact">Contact</a>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>    
+    </div>
+  );
+}
 
 export default App;
