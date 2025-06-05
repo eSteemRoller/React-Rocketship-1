@@ -1,5 +1,5 @@
 
-// Open 'New Terminal' and enter: npm start
+// Open Terminal>New Terminal and enter: npm start
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router';
@@ -17,30 +17,9 @@ function App() {
     <div>
       <Router>
         <nav>
-          <Link to="/">Home</a>
-          <Link to="/about">About</a>
-          <Link to="/contact">Contact</a>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>    
-    </div>
-  );
-}
-function App() {
-
-
-  
-  return (
-    <div>
-      <Router>
-        <nav>
-          <Link to="/">Home</a>
-          <Link to="/about">About</a>
-          <Link to="/contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />

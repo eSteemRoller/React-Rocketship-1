@@ -1,5 +1,5 @@
 
-// Open 'New Terminal' and enter: npm start
+// Open Terminal>New Terminal and enter: npm start
 
 import './App.css';
 import Modal from './components/Modal.jsx';

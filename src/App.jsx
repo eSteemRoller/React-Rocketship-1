@@ -1,9 +1,11 @@
 
-// Open 'New Terminal' and enter: npm start
+// Open Terminal>New Terminal and enter: npm start
 
-import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import Home from './pages/Home.jsx';
+import Nav from './components/Nav.jsx';
+import Users from './pages/Users.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 
@@ -16,36 +18,10 @@ function App() {
   return (
     <div>
       <Router>
-        <nav>
-          <Link to="/">Home</a>
-          <Link to="/about">About</a>
-          <Link to="/contact">Contact</a>
-        </nav>
+        <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>    
-    </div>
-  );
-}
-
-export default App;
-function App() {
-
-
-  
-  return (
-    <div>
-      <Router>
-        <nav>
-          <Link to="/">Home</a>
-          <Link to="/about">About</a>
-          <Link to="/contact">Contact</a>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/users/:username" element={<Users />} /> {/* a dynamic route */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
