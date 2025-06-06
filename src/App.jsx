@@ -21,7 +21,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/users/:username" element={<Users />} /> {/* a dynamic route */}
+          <Route path="/users/:id" element={<Users />} /> {/* a dynamic route; should work w/o "/users" because of import from Users.jsx */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

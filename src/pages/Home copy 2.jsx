@@ -1,8 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import User from "../components/User.jsx"
-import { Link } from "react-router";
+
 
 function Home() {
 
@@ -20,20 +19,17 @@ function Home() {
         fetchUsers();
     }, []);
 
-    // const pixels = "2px";
+    const pixels = "2px";
 
     return (
         <div>
             {users.map((user) => (
-                <Link to={`/users/${user.id}`} key={user.id}>
-                    <User 
-                        key={user.id}
-                        id={user.id} 
-                        name={user.name} 
-                        email={user.email} 
-                        username={user.username}
-                    />
-                </Link>
+                <div key={user.id} style={{border: `${pixels} solid black`}}>
+                    <div>{user?.id}</div>
+                    <div>{user?.name}</div>
+                    <div>{user?.email}</div>
+                    <div>{user?.username}</div>
+                </div>
             ))}
         </div>
     );
