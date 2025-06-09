@@ -1,13 +1,32 @@
 
-import { useParams } from "react-router";
-import React, {useEffect} from "react";
+// https://jsonplaceholder.typicode.com/users/id
+
+import { Link, useParams } from "react-router";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+
 
 function Users() {
     const {id} = useParams(); //const name must match dynamic route name here
+    const [user, setUser] = useState({});
+
+    async function fetchUser() {
+        const { data } = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+        setUser(data);
+    }
+
     useEffect(() => {
-        // fetch(`https://api.instagram.com/${username}`) just an example
+        fetchUser();
     }, [])
-    return <h1>{id}</h1>; // same const name here, too
+    return (
+        <>
+            <p><Link to="/">Go back</Link></p>
+            <h1>{user.id}</h1>
+            <h1>{user.name}</h1>
+            <h1>{user.email}</h1>
+            <h1>{user.username}</h1>
+        </>
+    );
 }
 
 export default Users;
